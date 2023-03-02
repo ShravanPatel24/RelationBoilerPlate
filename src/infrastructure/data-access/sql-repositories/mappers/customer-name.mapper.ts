@@ -1,17 +1,16 @@
-import { Injectable } from '@nestjs/common';
-import { eDataSource, IDTO, IMapper, UniqueEntityID } from '@softobiz-df/shared-lib';
-import {  CustomerName  } from 'src/domain/Customer/customer-name';
-import {  CustomerModel } from '../models/customer.model';
-
+import { Injectable } from '@nestjs/common'
+import { eDataSource, IDTO, IMapper, UniqueEntityID } from '@softobiz-df/shared-lib'
+import { CustomerName } from 'src/domain/Customer/customer-name'
+import { CustomerModel } from '../models/customer.model'
 
 @Injectable()
-export class  CustomerNameSqlMapper implements IMapper {
+export class CustomerNameSqlMapper implements IMapper {
 	constructor() {}
 
-	toDomain(raw:  CustomerModel): CustomerName {
-		return  CustomerName.create(
+	toDomain(raw: CustomerModel): CustomerName {
+		return CustomerName.create(
 			{
-				name: raw.name		
+				name: raw.name,
 			},
 			// new UniqueEntityID(raw.uuid),eDataSource.STORAGE,
 		).getValue()
@@ -22,10 +21,10 @@ export class  CustomerNameSqlMapper implements IMapper {
 			curEntity = new CustomerModel()
 		}
 		// curEntity.uuid = input.id.toString()
-		curEntity.name = input.props.name;
-		
+		curEntity.name = input.props.name
+
 		//@todo:: improve mapping
-		return curEntity;
+		return curEntity
 	}
 	toDto(input: CustomerModel): IDTO {
 		throw new Error('Method not implemented.')

@@ -1,12 +1,9 @@
-import { Column,Entity, OneToMany} from 'typeorm';
-import { BaseModel } from './base.model';
-import {ProductModel } from '../models/product.model'
-
+import { Column, Entity, OneToMany } from 'typeorm'
+import { BaseModel } from './base.model'
+import { ProductModel } from '../models/product.model'
 
 @Entity({ name: 'Customer' })
-
 export class CustomerModel extends BaseModel {
-
 	//#region constructors
 	public constructor(init?: Partial<CustomerModel>) {
 		super()
@@ -16,8 +13,7 @@ export class CustomerModel extends BaseModel {
 
 	@Column()
 	public name: string
-	
-	@OneToMany(()=>ProductModel, (product)=>product.customer)
-	products:ProductModel[]
 
+	@OneToMany(() => ProductModel, (product) => product.customer)
+	products: ProductModel[]
 }

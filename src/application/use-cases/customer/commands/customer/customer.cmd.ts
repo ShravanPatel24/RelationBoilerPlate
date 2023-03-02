@@ -1,9 +1,7 @@
-import { IRequest } from '@softobiz-df/shared-lib';
-import { IsOptional } from 'class-validator';
-import { CustomerCreateResponseType } from './customer.response.type';
-import { ApiProperty } from '@nestjs/swagger';
-
-
+import { IRequest } from '@softobiz-df/shared-lib'
+import { IsOptional } from 'class-validator'
+import { CustomerCreateResponseType } from './customer.response.type'
+import { ApiProperty } from '@nestjs/swagger'
 
 export class CustomerCreateCommand implements IRequest<CustomerCreateResponseType> {
 	@IsOptional()
@@ -13,7 +11,7 @@ export class CustomerCreateCommand implements IRequest<CustomerCreateResponseTyp
 	// @IsOptional()
 	// @ApiProperty()
 	// public products: any
-  
+
 	public constructor(init?: Partial<CustomerCreateCommand>) {
 		Object.assign(this, init)
 	}
