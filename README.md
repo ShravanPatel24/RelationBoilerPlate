@@ -1,4 +1,4 @@
-# Install Yoeman Globally
+#Install Yoeman Globally
 * First you must have Yeoman installed globally
        ```
          npm install -g yo
@@ -523,6 +523,6 @@ Nest is [MIT licensed](LICENSE).
   
   
   
-  #   R e l a t i o n B o i l e r P l a t e 
- 
- 
+  #� �R�e�l�a�t�i�o�n�B�o�i�l�e�r�P�l�a�t�e�
+�
+�
