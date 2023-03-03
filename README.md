@@ -1,4 +1,4 @@
-#Install Yoeman Globally
+# Install Yoeman Globally
 * First you must have Yeoman installed globally
        ```
          npm install -g yo
